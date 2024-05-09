@@ -301,6 +301,9 @@ fieldset {
   background-color: transparent;
 
   font: var(--font-normal);
+  &.textarea{
+    border-radius: 20px;
+  }
 }
 
 .addForm .addForm__input::placeholder {

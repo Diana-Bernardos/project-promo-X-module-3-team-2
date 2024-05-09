@@ -98,7 +98,7 @@ function App() {
             <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleChange}/>
             <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo" onChange={handleChange}/>
           </div>         
-          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleChange}/>
+          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleChange} maxLength='30'/>
           <textarea className="addForm__input textarea" type="text" name="desc" id="desc" placeholder="Descripción" rows="5" onChange={handleChange}></textarea>
         </fieldset>
     

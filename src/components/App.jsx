@@ -6,9 +6,38 @@ import Avatar from'../images/avatar.webp';
 import ebook from '../images/ebook-example.jpg';
 import Github from '../images/icons/github.svg';
 import globe from '../images/icons/globe-solid.svg';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [data, setData] = useState({name: "", slogan: "", technologies: "", repo: "", demo: "", desc: "", autor: "", job: "", image: "", photo: ""});
+
+  const handleChange =(ev)=>{
+    const id = ev.target.id;
+    const value = ev.target.value;
+
+    setData({...data, [id]: value});
+    
+    // if(id === 'name'){
+    //   setData({...data, name: value})
+    // } else if (id === 'slogan'){
+    //   setData({...data, slogan: value})
+    // } else if (id === 'technologies'){
+    //   setData({...data, technologies: value})
+    // } else if (id === 'repo'){
+    //   setData({...data, repo: value})
+    // }else if (id === 'demo'){
+    //   setData({...data, demo: value})
+    // }else if (id === 'desc'){
+    //   setData({...data, desc: value})
+    // }else if (id === 'autor'){
+    //   setData({...data, autor: value})
+    // }else if (id === 'job'){
+    //   setData({...data, job: value})
+    // }
+  }
+
   return (
     <div className="container">
 
@@ -35,19 +64,19 @@ function App() {
           <div className="card__author">
             <div className="card__authorPhoto"></div>
             <p className="card__job">
-              Full stack Developer
+              {data.job || "Full stack Developer"}
             </p>
-            <h3 className="card__name">Emmelie Bjôrklund</h3>
+            <h3 className="card__name">{data.autor || "Emmelie Bjôrklund"}</h3>
           </div>
       
           <div className="card__project">            
-            <h3 className="card__name">Elegant Workspace</h3>
-            <p className="card__slogan">Diseños Exclusivos</p>
+            <h3 className="card__name">{data.name || "Elegante Workspace"}</h3>
+            <p className="card__slogan">{data.slogan || "Diseños Exclusivos"}</p>
             <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione</p>
+            <p className="card__description">{data.desc || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"}</p>
 
             <div className="card__technicalInfo">
-              <p className="card__technologies">React JS - HTML - CSS</p>
+              <p className="card__technologies">{data.technologies || "React JS - HTML - CSS"}</p>
           
               <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">
                 Web link
@@ -63,20 +92,20 @@ function App() {
         <h2 className="title">Información</h2>
         <fieldset className="addForm__group">
           <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-          <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto"/>
-          <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan"/>
+          <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto" onChange={handleChange}/>
+          <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan" onChange={handleChange}/>
           <div className="addForm__2col">
-            <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio"/>
-            <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo"/>
+            <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleChange}/>
+            <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo" onChange={handleChange}/>
           </div>         
-          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías"/>
-          <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5"></textarea>
+          <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleChange}/>
+          <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5" onChange={handleChange}></textarea>
         </fieldset>
     
         <fieldset className="addForm__group">
           <legend className="addForm__title">Cuéntanos sobre la autora</legend>
-          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre"/>
-          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo"/>
+          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre" onChange={handleChange}/>
+          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo" onChange={handleChange}/>
         </fieldset>
     
         <fieldset className="addForm__group--upload">

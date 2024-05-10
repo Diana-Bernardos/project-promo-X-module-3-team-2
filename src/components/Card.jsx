@@ -1,3 +1,5 @@
+import "../styles/Card.scss";
+
 const Card = ({props}) => {
 
     const {name, slogan, technologies, repo, demo, desc, autor, job, image, photo} = props

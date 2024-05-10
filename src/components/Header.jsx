@@ -1,5 +1,6 @@
 import logoAdalab from '../images/adalab.png';
 import laptop from '../images/laptop-code-solid.svg';
+import "../styles/Header.scss"
 
 const Header = () => {
   return (

@@ -2,6 +2,7 @@ import Hero from './Hero';
 import Preview from './Preview';
 import Form from './Form';
 import { useState } from 'react';
+import "../styles/Main.scss";
 
 
 const Main = () => {

@@ -1,3 +1,5 @@
+import "../styles/Hero.scss";
+
 const Hero = () => {
   return (
     <section className="hero">

@@ -1,4 +1,5 @@
 import logoAdalab from '../images/adalab.png';
+import "../styles/Footer.scss";
 
 const Footer = () => {
   return (

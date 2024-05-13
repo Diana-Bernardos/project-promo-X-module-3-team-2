@@ -1,4 +1,5 @@
 import "../styles/Form.scss";
+import GetAvatar from "./GetAvatar";
 
 const Form = (props) => {
 
@@ -8,6 +9,7 @@ const Form = (props) => {
 
     props.getInput(id, value);
   }
+
 
   return (
     <form className="addForm">
@@ -31,11 +33,15 @@ const Form = (props) => {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <label htmlFor="image" className="button">Subir foto del proyecto</label>
+          <GetAvatar text="Subir foto del proyecto" updateAvatar={props.updateAvatar}/>
+
+          {/* <GetAvatar text="Subir foto de la autora" updateAvatar={props.updateAvatar}/> */}
+
+          {/* <label htmlFor="image" className="button">Subir foto del proyecto</label>
           <input className="addForm__hidden" type="file" name="image" id="image"/>
           <label htmlFor="photo" className="button">Subir foto de la autora</label>
           <input className="addForm__hidden" type="file" name="photo" id="photo"/>
-          <button className="button--large">Guardar proyecto</button>
+          <button className="button--large">Guardar proyecto</button> */}
         </fieldset>  
       </form>
   )

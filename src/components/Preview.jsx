@@ -1,14 +1,16 @@
 import Card from "./Card";
 import "../styles/Preview.scss";
+import Profile from "./Profile";
 
 const Preview = ({projectData}) => {
 
    
   return (
     <section className="preview">
-        <div className="projectImage"></div>
+        <Profile avatar={projectData.image}/>
+        {/* <div className="projectImage" style={`background-image: {projectData.image}`}></div> */}
         <Card props={projectData}/>
-      </section>
+    </section>
   )
 }
 

@@ -7,6 +7,8 @@ import "../styles/Main.scss";
 
 const Main = () => {
 
+  
+
     const [data, setData] = useState({
         name: "", 
         slogan: "", 
@@ -18,19 +20,31 @@ const Main = () => {
         job: "", 
         image: "", 
         photo: ""
-        }
-      );
+      }
+    );
+
+    const [avatar, setAvatar] = useState('');
+    const updateAvatar = (avatar) => {
+      setAvatar(avatar);
+      setData({...data, image: avatar});
+    };
+
+    const [imgProject, setImgProject] = useState('');
+    // const updateAvatar = (imgProject) => {
+    //   setImgProject(imgProject);
+    // };
     
     const getInput = (id, value)=>{
         setData({...data, [id]: value});
     }
     
+    console.log(data);
 
   return (
     <main className="main">
       <Hero/>
-      <Preview projectData={data}/>
-      <Form getInput={getInput}/>
+      <Preview projectData={data} avatar={avatar}/>
+      <Form getInput={getInput} updateAvatar={updateAvatar}/>
     </main>
   )
 }

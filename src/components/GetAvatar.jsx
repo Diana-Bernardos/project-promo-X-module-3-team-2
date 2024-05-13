@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ebook from '../images/ebook-example.jpg';
+import defaultAvatar from '../images/defaultAvatar.png';
 import '../styles/GetAvatar.scss';
 
-function GetAvatar({avatar=ebook, updateAvatar, text='', id}) {
+function GetAvatar({avatar=defaultAvatar, updateAvatar, text='', id}) {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
   // esto es un manejador de ficheros
   const fr = new FileReader();

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultAvatar from '../images/defaultAvatar.png';
+import ebook from '../images/ebook-example.jpg';
 import '../styles/Profile.scss';
 
 function Profile(props) {
-  const avatar = props.avatar === '' ? defaultAvatar : props.avatar;
+  const avatar = props.avatar === '' ? ebook : props.avatar;
   return (
     <div className="profile">
       <div

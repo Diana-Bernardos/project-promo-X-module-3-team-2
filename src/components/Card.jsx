@@ -13,7 +13,7 @@ const Card = ({props}) => {
             <p className="card__job">
               {job || "Full stack Developer"}
             </p>
-            <h3 className="card__name">{autor || "Emmelie Bjôrklund"}</h3>
+            <h3 className="card__name--author">{autor || "Emmelie Bjôrklund"}</h3>
           </div>
       
           <div className="card__project">            
@@ -25,10 +25,10 @@ const Card = ({props}) => {
             <div className="card__technicalInfo">
               <p className="card__technologies">{technologies || "React JS - HTML - CSS"}</p>
           
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">
+              <a className="icon icon__www" href={demo} title="Haz click para ver el proyecto online" target="_blank">
                 Web link
               </a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto">
+              <a className="icon icon__github" href={repo} title="Haz click para ver el código del proyecto" target="_blank">
                 GitHub link
               </a>
             </div>

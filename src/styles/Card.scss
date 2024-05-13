@@ -65,11 +65,16 @@
   
   .card .card__job {
     margin-bottom: 0.2rem;
+    text-align: center;
   }
   
   .card .card__name {
     font: var(--font-card-title);
     margin-bottom: .2rem;
+  }
+
+  .card .card__name--author {
+    text-align: center;
   }
   
   .card .card__project {

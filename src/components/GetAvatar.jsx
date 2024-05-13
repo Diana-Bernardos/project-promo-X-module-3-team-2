@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultAvatar from '../images/defaultAvatar.png';
 import '../styles/GetAvatar.scss';
 
-function GetAvatar({avatar=defaultAvatar, updateAvatar, text='', id}) {
+function GetAvatar({updateAvatar, text='', id}) {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
   // esto es un manejador de ficheros
   const fr = new FileReader();
@@ -81,7 +80,8 @@ function GetAvatar({avatar=defaultAvatar, updateAvatar, text='', id}) {
 GetAvatar.propTypes = {
   avatar: PropTypes.string,
   updateAvatar: PropTypes.func.isRequired,
-  text: PropTypes.string
+  text: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default GetAvatar;

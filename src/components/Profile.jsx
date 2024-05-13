@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ebook from '../images/ebook-example.jpg';
 import '../styles/Profile.scss';
 
 function Profile(props) {
-  const avatar = props.avatar === '' ? ebook : props.avatar;
+  const avatar = props.avatar === '' ? props.defaultImg : props.avatar;
   return (
     <div className="profile">
       <div
-        className="profile__avatar"
+        className={props.scssClass}
         style={{ backgroundImage: `url(${avatar})` }}
       ></div>
     </div>

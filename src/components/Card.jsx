@@ -1,4 +1,6 @@
 import "../styles/Card.scss";
+import Profile from "./Profile";
+import avatar from'../images/avatar.webp';
 
 const Card = ({props}) => {
 
@@ -9,7 +11,8 @@ const Card = ({props}) => {
           <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
 
           <div className="card__author">
-            <div className="card__authorPhoto"></div>
+            {/* <div className="card__authorPhoto"></div> */}
+            <Profile scssClass="card__authorPhoto" avatar={photo} defaultImg={avatar}/>
             <p className="card__job">
               {job || "Full stack Developer"}
             </p>

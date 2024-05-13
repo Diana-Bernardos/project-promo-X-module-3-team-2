@@ -9,7 +9,7 @@ const Form = (props) => {
 
     props.getInput(id, value);
   }
-
+  
 
   return (
     <form className="addForm">
@@ -33,9 +33,9 @@ const Form = (props) => {
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <GetAvatar text="Subir foto del proyecto" updateAvatar={props.updateAvatar}/>
+          <GetAvatar id="image" text="Subir foto del proyecto" updateAvatar={props.updateAvatar}/>
 
-          {/* <GetAvatar text="Subir foto de la autora" updateAvatar={props.updateAvatar}/> */}
+          <GetAvatar id="photo" text="Subir foto de la autora" updateAvatar={props.updateAvatar}/>
 
           {/* <label htmlFor="image" className="button">Subir foto del proyecto</label>
           <input className="addForm__hidden" type="file" name="image" id="image"/>

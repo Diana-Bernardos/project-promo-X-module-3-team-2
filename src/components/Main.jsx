@@ -23,16 +23,11 @@ const Main = () => {
       }
     );
 
-    const [avatar, setAvatar] = useState('');
-    const updateAvatar = (avatar) => {
-      setAvatar(avatar);
-      setData({...data, image: avatar});
+ 
+    const updateAvatar = (id, avatar) => {
+      console.log(id);
+      setData({...data, [id]: avatar});
     };
-
-    const [imgProject, setImgProject] = useState('');
-    // const updateAvatar = (imgProject) => {
-    //   setImgProject(imgProject);
-    // };
     
     const getInput = (id, value)=>{
         setData({...data, [id]: value});
@@ -43,7 +38,7 @@ const Main = () => {
   return (
     <main className="main">
       <Hero/>
-      <Preview projectData={data} avatar={avatar}/>
+      <Preview projectData={data}/>
       <Form getInput={getInput} updateAvatar={updateAvatar}/>
     </main>
   )

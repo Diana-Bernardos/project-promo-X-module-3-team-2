@@ -1,7 +1,7 @@
 // Fichero src/components/App.jsx
 import '../styles/App.scss';
 
-import Avatar from'../images/avatar.webp';
+
 import ebook from '../images/ebook-example.jpg';
 import Github from '../images/icons/github.svg';
 import globe from '../images/icons/globe-solid.svg';

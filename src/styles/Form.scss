@@ -55,6 +55,17 @@
       border-radius: 20px;
     }
   }
+
+  .addForm .error-msg{
+    display: block;
+    width: calc( 100% - 20px );
+    margin: 10px auto;
+    padding: 2px 16px 8.5px 16px;
+    color: var(--color-white);
+    font: var(--font-normal);
+    opacity: 0.5;
+    font-style: italic;
+  }
   
   .addForm .addForm__input::placeholder {
     color: var(--color-white-50);
@@ -72,13 +83,14 @@
   }
   
   .addForm .addForm__2col {
-    width: calc( 100% - 20px );
+    width: calc( 100%);
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
   }
-  
-  .addForm .addForm__2col .addForm__input {
+
+  .addForm .addForm__2col .addForm__url {
     width: calc( (100% - .2rem) / 2 );
+    padding: 0;
     margin: 0;
   }

@@ -39,7 +39,7 @@ const Main = () => {
     <main className="main">
       <Hero/>
       <Preview projectData={data}/>
-      <Form getInput={getInput} updateAvatar={updateAvatar}/>
+      <Form getInput={getInput} updateAvatar={updateAvatar} data={data}/>
     </main>
   )
 }

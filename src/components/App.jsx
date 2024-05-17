@@ -9,17 +9,15 @@ import { useState } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
-import Landing from './Landing';
 
 
 function App() {
 
   return (
     <div className="container">
-      {/* <Landing /> */}
-    <Header/>
-    <Main/>
-    <Footer/>
+      <Header/>
+      <Main/>
+      <Footer/>
 
   </div>
   );

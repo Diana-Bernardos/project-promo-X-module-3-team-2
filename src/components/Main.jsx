@@ -7,32 +7,42 @@ import "../styles/Main.scss";
 
 const Main = () => {
 
-  
+    const initialDataState = () => {
+        const localStorageData = JSON.parse(localStorage.getItem('data'))
+        if (localStorageData) {
+            return localStorageData;
+        }
 
-    const [data, setData] = useState({
-        name: "", 
-        slogan: "", 
-        technologies: "", 
-        repo: "", 
-        demo: "", 
-        desc: "", 
-        autor: "", 
-        job: "", 
-        image: "", 
-        photo: ""
-      }
-    );
+        return {
+            name: '',
+            slogan: '',
+            technologies: '',
+            repo: '',
+            demo: '',
+            desc: '',
+            autor: '',
+            job: '',
+            image: '',
+            photo: ''
+        };
+    }
+
+    const [data, setData] = useState(initialDataState());
 
  
     const updateAvatar = (id, avatar) => {
       console.log(id);
-      setData({...data, [id]: avatar});
+        const newAvatar = {...data, [id]: avatar};
+        setData(newAvatar);
+        localStorage.setItem('data', JSON.stringify(newAvatar));
     };
     
     const getInput = (id, value)=>{
-        setData({...data, [id]: value});
+        const newInput = {...data, [id]: value};
+        setData(newInput);
+        localStorage.setItem('data', JSON.stringify(newInput));
     }
-    
+
     console.log(data);
 
   return (

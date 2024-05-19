@@ -1,46 +1,45 @@
 import Hero from './Hero';
 import Preview from './Preview';
 import Form from './Form';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import "../styles/Main.scss";
+// Importamos el servicio del local storage
+import ls from '../services/localStorage';
 
 
 const Main = () => {
 
-    const initialDataState = () => {
-        const localStorageData = JSON.parse(localStorage.getItem('data'))
-        if (localStorageData) {
-            return localStorageData;
-        }
+    // Obtenemos el nombre del local storage
+    // Si hay datos en el local storage esta función los devolverá
+    // Si no hay datos en el local storage esta función devolverá el segundo parámetro, es decir, un string vacío
+    const localStorageData = ls.get('data', {
+        name: '',
+        slogan: '',
+        technologies: '',
+        repo: '',
+        demo: '',
+        desc: '',
+        autor: '',
+        job: '',
+        image: '',
+        photo: ''
+    });
 
-        return {
-            name: '',
-            slogan: '',
-            technologies: '',
-            repo: '',
-            demo: '',
-            desc: '',
-            autor: '',
-            job: '',
-            image: '',
-            photo: ''
-        };
-    }
+    const [data, setData] = useState(localStorageData);
 
-    const [data, setData] = useState(initialDataState());
+    useEffect(() => {
+        // Guardamos data en el local storage
+        ls.set('data', data);
 
- 
+    }, [data]);
+
     const updateAvatar = (id, avatar) => {
-      console.log(id);
-        const newAvatar = {...data, [id]: avatar};
-        setData(newAvatar);
-        localStorage.setItem('data', JSON.stringify(newAvatar));
+        console.log(id);
+        setData({...data, [id]: avatar});
     };
     
     const getInput = (id, value)=>{
-        const newInput = {...data, [id]: value};
-        setData(newInput);
-        localStorage.setItem('data', JSON.stringify(newInput));
+        setData({...data, [id]: value});
     }
 
     console.log(data);

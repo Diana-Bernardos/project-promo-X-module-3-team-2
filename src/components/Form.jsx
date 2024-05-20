@@ -113,7 +113,7 @@ const Form = (props) => {
 
           <GetAvatar id="photo" text="Subir foto de la autora" updateAvatar={props.updateAvatar}/>
 
-          <Button data={props.data} postData={postData}/>
+          <Button data={props.data} postData={postData} addNewProject={props.addNewProject}/>
         </fieldset>
         <div>
           {cardURL}
@@ -126,6 +126,7 @@ Form.propTypes = {
   getInput: PropTypes.func,
   data: PropTypes.object,
   updateAvatar: PropTypes.func,
+  addNewProject: PropTypes.func
 };
 
 export default Form

@@ -1,11 +1,11 @@
 //import postData from "../services/postData"
 
-const Button = ({data, postData}) => {
+const Button = ({data, postData, addNewProject}) => {
 
     const handleClick = (ev) => {
         ev.preventDefault()
         postData(data)
-
+        addNewProject()
     }
 
   return (

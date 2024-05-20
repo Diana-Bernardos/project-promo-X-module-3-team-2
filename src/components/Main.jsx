@@ -29,11 +29,23 @@ const Main = () => {
 
     const [data, setData] = useState(localStorageData);
 
+    const [allProjects, setAllProjects] = useState([]);
+
+    const addNewProject = ()=> {
+      setAllProjects([...allProjects, data])
+    }
+ 
     useEffect(() => {
         // Guardamos data en el local storage
         ls.set('data', data);
-
     }, [data]);
+
+
+  //FIX THIS!!!!!!!!!!
+  //   useEffect(() => {
+  //     // Guardamos allProjects en el local storage
+  //     ls.set('allProjects', allProjects);
+  // }, [allProjects]);
 
     const updateAvatar = (id, avatar) => {
         console.log(id);
@@ -51,7 +63,7 @@ const Main = () => {
     <main className="main">
       <Hero/>
       <Preview projectData={data}/>
-      <Form getInput={getInput} updateAvatar={updateAvatar} data={data}/>
+      <Form getInput={getInput} updateAvatar={updateAvatar} data={data} addNewProject={addNewProject}/>
     </main>
   )
 }

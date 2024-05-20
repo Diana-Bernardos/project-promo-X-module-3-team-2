@@ -1,10 +1,12 @@
 import Hero from './Hero';
 import Preview from './Preview';
 import Form from './Form';
+
 import {useEffect, useState} from 'react';
 import "../styles/Main.scss";
 // Importamos el servicio del local storage
 import ls from '../services/localStorage';
+import postData from '../services/postData';
 
 
 const Main = () => {
@@ -42,7 +44,8 @@ const Main = () => {
         setData({...data, [id]: value});
     }
 
-    console.log(data);
+    console.log(postData);
+    
 
   return (
     <main className="main">

@@ -1,4 +1,6 @@
+import postData from "../services/postData";
 import "../styles/Form.scss";
+import Button from "./Button";
 import GetAvatar from "./GetAvatar";
 import PropTypes from "prop-types";
 import { useState } from 'react';
@@ -44,6 +46,32 @@ const Form = (props) => {
     validateInput(id, value);
   }
 
+  const [cardURL, setCardURL] = useState("")
+
+  const postData = (data) => {
+
+    return fetch('https://dev.adalab.es/api/projectCard', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(dataResponse => {
+            console.log(dataResponse);
+            if(dataResponse.success){
+                // console.log(dataResponse.cardURL)
+                setCardURL(<a href={dataResponse.cardURL} target="_blank" className="linkProject">Entra aquí para ver tu proyecto</a>)
+                
+             }
+             else {
+                setCardURL("Asegúrate de haber rellenado todos los campos")
+             }
+    
+        })
+    }
+
+  
+
 
   return (
     <form className="addForm">
@@ -84,7 +112,12 @@ const Form = (props) => {
           <GetAvatar id="image" text="Subir foto del proyecto" updateAvatar={props.updateAvatar}/>
 
           <GetAvatar id="photo" text="Subir foto de la autora" updateAvatar={props.updateAvatar}/>
+
+          <Button data={props.data} postData={postData}/>
         </fieldset>
+        <div>
+          {cardURL}
+        </div>
       </form>
   )
 }

@@ -3,14 +3,14 @@ import "../styles/Preview.scss";
 import Profile from "./Profile";
 import ebook from '../images/ebook-example.jpg';
 
-const Preview = ({projectData}) => {
+const Preview = ({data}) => {
 
    
   return (
     <section className="preview">
-        <Profile avatar={projectData.image} scssClass="projectImage" defaultImg={ebook}/>
-        {/* <div className="projectImage" style={`background-image: {projectData.image}`}></div> */}
-        <Card props={projectData}/>
+        <Profile avatar={data.image} scssClass="projectImage" defaultImg={ebook}/>
+        {/* <div className="projectImage" style={`background-image: {data.image}`}></div> */}
+        <Card props={data}/>
     </section>
   )
 }

@@ -9,14 +9,18 @@ import { useState } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
-
+import { Route, Routes } from 'react-router';
+import Landing from './Landing';
 
 function App() {
 
   return (
     <div className="container">
       <Header/>
-      <Main/>
+      <Routes>
+        <Route path='./' element={<Landing/>}/>
+        <Route path='./createproject' element={<Main/>}/>
+      </Routes>
       <Footer/>
 
   </div>

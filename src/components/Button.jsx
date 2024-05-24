@@ -1,3 +1,4 @@
+import '../styles/Button.scss';
 //import postData from "../services/postData"
 
 const Button = ({data, postData, addNewProject}) => {

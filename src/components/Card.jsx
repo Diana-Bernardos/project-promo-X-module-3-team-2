@@ -6,6 +6,9 @@ const Card = ({props}) => {
 
     const {name, slogan, technologies, repo, demo, desc, autor, job, image, photo} = props
 
+    const urldemo = demo.includes('http://' || 'https://') ? demo : `https://${demo}`;
+    const urlrepo = repo.includes('http://' || 'https://') ? repo : `https://${repo}`;
+
   return (
     <article className="card">
           <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
@@ -28,10 +31,10 @@ const Card = ({props}) => {
             <div className="card__technicalInfo">
               <p className="card__technologies">{technologies || "React JS - HTML - CSS"}</p>
           
-              <a className="icon icon__www" href={demo} title="Haz click para ver el proyecto online" target="_blank">
+              <a className="icon icon__www" href={urldemo} title="Haz click para ver el proyecto online" target="_blank">
                 Web link
               </a>
-              <a className="icon icon__github" href={repo} title="Haz click para ver el código del proyecto" target="_blank">
+              <a className="icon icon__github" href={urlrepo} title="Haz click para ver el código del proyecto" target="_blank">
                 GitHub link
               </a>
             </div>

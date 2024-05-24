@@ -74,6 +74,7 @@
   .addForm .addForm__group--upload {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 25px;
   }
@@ -81,10 +82,26 @@
   .addForm .addForm__hidden {
     display: none;
   }
+
+  .addForm .addForm__input-url {
+    display: block;
+    width: calc( 100% - 20px );
+    margin: 0px auto;
+    padding: 8.5px 16px 8.5px 16px;
+    border-radius: 40px;
+    border: solid 2px var(--color-white);
+    color: var(--color-white);
+    background-color: transparent;
+  
+    font: var(--font-normal);
+    &.textarea{
+      border-radius: 20px;
+    }
+  }
   
   .addForm .addForm__2col {
     width: calc( 100%);
-    margin: 10px auto;
+    margin: 0px;
     display: flex;
     justify-content: space-between;
   }
@@ -104,4 +121,7 @@
     border: solid 2px var(--color-white);
   }
 
+  .hidden{
+    display: none;
+  }
   // mejora esta mierda ^^^

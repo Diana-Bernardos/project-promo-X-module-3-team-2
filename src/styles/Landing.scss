@@ -1,0 +1,11 @@
+.section_mockup{
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    min-height: calc(100vh - 225px);
+}

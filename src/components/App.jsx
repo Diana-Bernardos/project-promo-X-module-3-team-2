@@ -66,7 +66,7 @@ function App() {
     <div className="container">
       <Header/>
       <Routes>
-        <Route path='/' element={<Landing allProjects={allProjects}/>}/>
+        <Route path='/' element={<Landing allProjects={allProjects} data={data}/>}/>
         <Route path='/createproject' element={<Main getInput={getInput} updateAvatar={updateAvatar} data={data} addNewProject={addNewProject}/>}/>
       </Routes>
       <Footer/>

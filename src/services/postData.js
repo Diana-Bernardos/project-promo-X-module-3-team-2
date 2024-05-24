@@ -1,6 +1,6 @@
 const postData = (data) => {
 
-    return fetch('https://dev.adalab.es/api/projectCard', {
+    return fetch('//dev.adalab.es/api/projectCard', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)

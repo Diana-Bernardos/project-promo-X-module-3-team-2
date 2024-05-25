@@ -31,7 +31,7 @@
     left: 0;
     right: 0;
     z-index: 0;
-  
+    
     background: linear-gradient(90deg, rgba(160,199,250,1) 0%, transparent, rgba(148,187,233,1) 100%);
   }
   
@@ -62,16 +62,20 @@
   .card .card__job {
     margin-bottom: 0.2rem;
     text-align: center;
+    text-transform: capitalize;
   }
   
   .card .card__name {
     font: var(--font-card-title);
     margin-bottom: .2rem;
     color: var(--dark-blue);
+    text-align: left;
+    text-transform: capitalize;
   }
 
   .card .card__name--author {
     text-align: center;
+    text-transform: capitalize;
   }
   
   .card .card__project {
@@ -83,10 +87,18 @@
     margin-top: -.2rem;
     margin-bottom: .8rem;
     color: var(--light-blue);
+    text-align: left;
+    text-transform: capitalize;
   }
   
   .card .card__descriptionTitle {
     font-weight: inherit;
+    text-align: left;
+  }
+
+  .card .card__description {
+    font-weight: inherit;
+    text-align: left;
   }
   
   .card .card__technicalInfo {
@@ -94,9 +106,28 @@
     grid-template-columns: 1fr 2rem 2rem;
     gap: .5em;
     margin-block: 1.8rem;
+    text-align: left;
   }
   
   .card .card__technologies {
     font: var(--font-card-tech);
   }
   
+  /* ICONS */
+
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 var(--color-greyish-brown-two);
+}
+
+.icon__www {
+  background-image: url('../images/icons/globe-solid.svg');
+}
+
+.icon__github {
+  background-image: url('../images/icons/github.svg');
+}

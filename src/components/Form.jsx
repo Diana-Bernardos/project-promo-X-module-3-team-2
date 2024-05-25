@@ -4,9 +4,10 @@ import Button from "./Button";
 import GetAvatar from "./GetAvatar";
 import PropTypes from "prop-types";
 import { useState } from 'react';
+import ls from '../services/localStorage';
 
 const Form = (props) => {
-
+  const [cardURL, setCardURL] = useState("")
   const [errorMsg, setErrorMsg] = useState({
     name: '',
     slogan: '',
@@ -44,10 +45,12 @@ const Form = (props) => {
     const value = ev.target.value;
     validateInput(id, value);
     props.getInput(id, value);
-    
+    setCardURL("");
   }
 
-  const [cardURL, setCardURL] = useState("")
+  
+
+  
 
   const postData = (data) => {
 
@@ -62,6 +65,9 @@ const Form = (props) => {
             if(dataResponse.success){
                 console.log(dataResponse.cardURL)
                 setCardURL(<a href={dataResponse.cardURL} target="_blank" className="linkProject">Entra aquí para ver tu proyecto</a>)
+                // ls.set('data', data);
+                props.addNewProject();
+                props.resetData();
                 
              }
              else {
@@ -127,7 +133,8 @@ Form.propTypes = {
   getInput: PropTypes.func,
   data: PropTypes.object,
   updateAvatar: PropTypes.func,
-  addNewProject: PropTypes.func
+  addNewProject: PropTypes.func,
+  resetData: PropTypes.func
 };
 
 export default Form

@@ -1,7 +1,10 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2.5rem;
+    
+    background-color: white;
+    padding: 15px;
+    border-bottom: solid 1px var(--warm-grey);
   }
   
   .header .header__brand {
@@ -14,13 +17,13 @@
   
   .header .header__companyLogo {
     height: 31px;
-    color: var(--color-white);
+    color: var(--dark-blue);
   }
   
   .header .header__title {
     font: var(--font-title-brand);
     text-transform: capitalize;
-    color: var(--color-white);
+    color: var(--dark-blue);
   }
   
   @media screen and (min-width: 768px) {

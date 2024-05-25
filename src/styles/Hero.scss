@@ -1,20 +1,19 @@
 .hero {
     margin-bottom: 3rem;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .hero {
-      grid-column: span 2;
-    }
+    padding: 20px 0;
+    background-color: white;
+
   }
   
   .hero .title {
     font: var(--font-title-big);
+    color: var(--dark-blue);
     margin-bottom: 8px;
   }
   
   .hero .hero__text {
     font: var(--font-text-big);
+    color: var(--light-blue);
     text-align: center;
     margin-inline: 4rem;
     margin-bottom: 1.8rem;

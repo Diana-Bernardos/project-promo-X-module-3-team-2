@@ -19,11 +19,22 @@ fieldset {
   --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
   --color-dusk: #403a5f;
   --color-greyish-brown-two: #575757;
-  --color-dark: #302c42;
+  --color-dark: #202221;
   --color-warm-grey: #909090;
-  --color-white: #ffffff;
+  --color-white: #f8edde;
   --color-dark-lilac: #8176af;
   --color-white-50: rgba(255, 255, 255, 0.5);
+
+
+  /* NEW PALETTE */
+
+  --dark-blue: #5956E0;
+  --light-turquoise: #9FDFF1;
+  --light-blue: #A0C7FA;
+  --lilac: #D1B1F8;
+  --warm-grey: #D8D6D6;
+  --pale-neutral: #DCDBF2;
+  --pale-lilac: #DFC8F8;
 
 
   /* FONTS */
@@ -47,7 +58,7 @@ fieldset {
 
 :root {
   font: var(--font-normal); /* font-size: 10px; */
-  color: var(--color-white);
+  color: black;
 }
 
 @media screen and (min-width: 420px) {
@@ -63,13 +74,11 @@ fieldset {
 }
 
 .container {
-  padding: 22px 22px 0 22px;
-  background-color: var(--color-dark);
+  // padding: 22px 22px 0 22px;
+  background-image: url('../images/gradient_4.png');
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
 }
-
-
-
-
 
 
 /* COMPONENTS */
@@ -92,7 +101,7 @@ fieldset {
   color: transparent;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 5px 0 var(--color-greyish-brown-two);
+  box-shadow: 0 0 2px 0 var(--color-greyish-brown-two);
 }
 
 .icon__www {

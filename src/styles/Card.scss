@@ -7,14 +7,9 @@
   
     border-radius: 20px;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-style: solid;
-    border-width: 1px;
-    border-image-source: linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
-    border-image-slice: 1;
-    background-image: linear-gradient(to bottom, var(--color-white), var(--color-white)), linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    backdrop-filter: blur(20px);
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    
   }
   
   .card .card__projectTitle {
@@ -25,6 +20,7 @@
     text-transform: capitalize;
   
     font: var(--font-card-section);
+    // color: var(--dark-blue);
   }
   
   .card .card__projectTitle::before {
@@ -36,14 +32,14 @@
     right: 0;
     z-index: 0;
   
-    background-image: linear-gradient(to right, white, #232323 15%, var(--color-black), #232323 85%, white);
+    background: linear-gradient(90deg, rgba(160,199,250,1) 0%, transparent, rgba(148,187,233,1) 100%);
   }
   
   .card .card__projectTitle--text {
     position: relative;
     padding-inline: 0.1em;
     z-index: 1;
-    background-color: var(--color-white);
+    //background-color: white;
   }
   
   .card .card__author {
@@ -71,6 +67,7 @@
   .card .card__name {
     font: var(--font-card-title);
     margin-bottom: .2rem;
+    color: var(--dark-blue);
   }
 
   .card .card__name--author {
@@ -85,18 +82,17 @@
     font: var(--font-card-subtitle);
     margin-top: -.2rem;
     margin-bottom: .8rem;
+    color: var(--light-blue);
   }
   
   .card .card__descriptionTitle {
     font-weight: inherit;
-    text-transform: capitalize;
   }
   
   .card .card__technicalInfo {
     display: grid;
     grid-template-columns: 1fr 2rem 2rem;
     gap: .5em;
-  
     margin-block: 1.8rem;
   }
   

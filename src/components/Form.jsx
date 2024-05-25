@@ -60,7 +60,7 @@ const Form = (props) => {
         .then(dataResponse => {
             console.log(dataResponse);
             if(dataResponse.success){
-                // console.log(dataResponse.cardURL)
+                console.log(dataResponse.cardURL)
                 setCardURL(<a href={dataResponse.cardURL} target="_blank" className="linkProject">Entra aquí para ver tu proyecto</a>)
                 
              }
@@ -116,7 +116,7 @@ const Form = (props) => {
 
           <Button data={props.data} postData={postData} addNewProject={props.addNewProject}/>
         </fieldset>
-        <div className="button--link">
+        <div className="cardURL">
           {cardURL}
         </div>
       </form>

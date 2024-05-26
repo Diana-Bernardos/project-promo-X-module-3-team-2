@@ -122,9 +122,10 @@
     top: 0;
     left: 0;
     background-image: url(../images/gradient_5.png);
+    background-size: cover;
     z-index: 10000;
     animation: showup 0.3s ease forwards;
-    opacity: 0;
+    // opacity: 0;
 }
 
 .closing {

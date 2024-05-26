@@ -1,7 +1,7 @@
 [
     {
         "name": "Gravity Screen",
-        "slogan": "Diseño responsive",
+        "slogan": "Responsive Design",
         "technologies": "Figma - HTML - CSS",
         "repo": "https://github.com",
         "demo": "https://google.com",
@@ -14,14 +14,14 @@
       {
         "name": "Abstract",
         "slogan": "Project Presentation Scene",
-        "technologies": "React - JS - HTML - CSS",
+        "technologies": "HTML - SCSS - JS",
         "repo": "https://github.com",
         "demo": "https://google.com",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare vulputate tellus, vel luctus dolor suscipit quis. Etiam vestibulum lectus sagittis, sagittis ligula quis, viverra ligula.",
-        "autor": "Maricarmen García",
+        "autor": "Maricarmen",
         "job": "UX - UI Designer",
         "image": "https://images.pixeden.com/images/abstract-ui-project-scene-mockup-3_full_preview_retina.jpg",
-        "photo": ""
+        "photo": "https://cdn.pixabay.com/photo/2020/05/17/20/21/cat-5183427_1280.jpg"
       },
       {
         "name": "Nostalgia",
@@ -82,17 +82,5 @@
         "job": "Illustraor & Designer",
         "image": "https://cdn.dribbble.com/userupload/14615426/file/original-8eb64ce9f964eccb43a6743a2d209f20.jpg?resize=1504x1128",
         "photo": "https://cdn.dribbble.com/users/508142/avatars/normal/1cffa29a3f16e934e3b310ce18ad2c6d.jpg?1696372002"
-      },
-      {
-        "name": "",
-        "slogan": "",
-        "technologies": "",
-        "repo": "https://github.com",
-        "demo": "https://google.com",
-        "desc": "",
-        "autor": "",
-        "job": "",
-        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
-        "photo": ""
       }
 ]

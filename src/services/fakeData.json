@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Gravity Screen",
+        "slogan": "Diseño responsive",
+        "technologies": "Figma - HTML - CSS",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "Pepa Jeison",
+        "job": "UX Designer",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": "https://www.perfocal.com/blog/content/images/2021/01/Perfocal_17-11-2019_TYWFAQ_100_standard-3.jpg"
+      },
+      {
+        "name": "Abstract",
+        "slogan": "Project Presentation Scene",
+        "technologies": "React - JS - HTML - CSS",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "Maricarmen García",
+        "job": "UX - UI Designer",
+        "image": "https://images.pixeden.com/images/abstract-ui-project-scene-mockup-3_full_preview_retina.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://cdn.dribbble.com/users/2438573/screenshots/7368064/media/e03e27fa49c86f8295680b7ed25ebbc0.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": ""
+      },
+      {
+        "name": "",
+        "slogan": "",
+        "technologies": "",
+        "repo": "https://github.com",
+        "demo": "https://google.com",
+        "desc": "",
+        "autor": "",
+        "job": "",
+        "image": "https://www.pixeden.com/media/k2/galleries/1383/001-devices-presentation-app-screens-project-showcase-graphic-psd-mockup.jpg",
+        "photo": ""
+      }
+]

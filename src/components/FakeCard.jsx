@@ -10,8 +10,8 @@ const FakeCard = ({data}) => {
 
     const {name, slogan, technologies, repo, demo, desc, autor, job, image, photo} = data
 
-    const urldemo = demo.includes('http://' || 'https://') ? demo : `https://${demo}`;
-    const urlrepo = repo.includes('http://' || 'https://') ? repo : `https://${repo}`;
+    // const urldemo = demo.includes('http://' || 'https://') ? demo : `https://${demo}`;
+    // const urlrepo = repo.includes('http://' || 'https://') ? repo : `https://${repo}`;
 
     const Popup = ({handleClose}) =>{
       const modalRef = useRef(null);
@@ -76,12 +76,12 @@ const FakeCard = ({data}) => {
               <p className="card__description">{desc || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"}</p>
               <div className="card__technicalInfo">
                 <p className="card__technologies">{technologies || "React JS - HTML - CSS"}</p>
-                <a className="icon icon__www" href={urldemo} title="Haz click para ver el proyecto online" target="_blank">
+                {/* <a className="icon icon__www" href={urldemo} title="Haz click para ver el proyecto online" target="_blank">
                 Web link
               </a>
               <a className="icon icon__github" href={urlrepo} title="Haz click para ver el código del proyecto" target="_blank">
                 GitHub link
-              </a>
+              </a> */}
               </div>
             </div>
       </article>
